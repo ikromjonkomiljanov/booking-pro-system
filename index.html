@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="booking">
+      <header></header>
+      <main>
+        <form action="" id="bookingForm">
+          <label for="">
+            <p>To'liq Ismingiz</p>
+            <input
+              type="text"
+              placeholder="To'liq ismingiz?"
+              name=""
+              id="fullname"
+              required
+            />
+          </label>
+          <label for="">
+            <p>Sana</p>
+            <input type="date" name="" id="date" required />
+          </label>
+          <label for="">
+            <p>vaqt</p>
+            <input type="time" name="" id="time" required />
+          </label>
+          <label for="">
+            <p>Mehmonlar soni</p>
+            <input
+              type="number"
+              placeholder="0"
+              name=""
+              id="guests"
+              required
+              min="1"
+              max="10"
+            />
+          </label>
+          <button type="submit">Tasdiqlash</button>
+        </form>
+
+        <div class="">
+          <div class="">
+            <h2 class="">Rezervatsiyalar</h2>
+            <div class="">
+              <button data-filter="all" class="filterBtns">All</button>
+              <button data-filter="today" class="filterBtns">Today</button>
+              <button data-filter="upcoming" class="filterBtns">
+                Upcoming
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="list"
+          style="
+            display: flex;
+            padding: 5px;
+            margin-top: 30px;
+            gap: 10px;
+            flex-wrap: wrap;
+          "
+        ></div>
+      </main>
+      <footer class="site-footer">
+      <p>© 2026 Rezervatsiya Tizimi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <a href="https://github.com/ikromjonkomiljanov" class="floating-signature" target="_blank">
+      <span class="dev-text">Built by &</span>
+      <span class="dev-name">Ikromjon Komiljanov</span>
+    </a>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

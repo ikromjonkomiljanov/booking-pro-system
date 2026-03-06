@@ -1,0 +1,336 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+#booking {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Form Styles */
+#bookingForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+label p {
+  margin: 0 0 8px 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #5a6fd6;
+  transform: translateY(-2px);
+}
+
+/* Filter Buttons */
+.filterBtns {
+  background: #eee;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.filterBtns:hover,
+.filterBtns.active {
+  background: #667eea;
+  color: white;
+}
+
+/* List Item Design */
+.booking-card {
+  background: white;
+  border-left: 5px solid #667eea;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-width: 200px;
+  flex: 1;
+}
+
+.booking-card h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+.booking-card p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Kartochkaning umumiy ko'rinishi */
+.booking-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Header qismi: Avatar va Status */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Status ranglari (Statusga qarab o'zgaradi) */
+.status-active {
+  background: #e3fcef;
+  color: #00875a;
+}
+.status-pending {
+  background: #fff7e6;
+  color: #ff9900;
+}
+
+/* Body qismi */
+.client-name {
+  margin: 0 0 10px 0;
+  color: #2d3436;
+  font-size: 1.25rem;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  color: #636e72;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Footer va Tugma */
+.card-footer {
+  margin-top: auto;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.delete-btn {
+  width: 100%;
+  background: #fff5f5;
+  color: #ff4757;
+  border: 1px solid #ffebeb;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff4757;
+  color: white;
+}
+
+/* Umumiy sozlamalar */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top right, #764ba2, #667eea);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
+
+.site-header h1 span {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Main Container */
+#booking {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; /* Markazga olish */
+  flex: 1; /* Footerni pastga itarish uchun */
+}
+
+/* Form Grid */
+#bookingForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  background: #fdfdfd;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+/* Responsive List */
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* O'ng pastdagi Floating Imzo */
+.floating-signature {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 10px 18px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #eee;
+  z-index: 1000;
+}
+
+.floating-signature:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.dev-text {
+  font-size: 0.65rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dev-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #764ba2;
+}
+
+/* Responsive Sozlamalar */
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  #booking { padding: 15px; border-radius: 15px; }
+  .floating-signature {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 14px;
+  }
+  .dev-name { font-size: 0.8rem; }
+}
